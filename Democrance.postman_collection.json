@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "e595987b-c61a-4a0a-88c2-b0a66e1f67a6",
+		"name": "Democrance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SaveCustomer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYyMDc4NTIyMSwiaWF0IjoxNjIwNzY3MjIxfQ.nq3J6NRvUmp2DC5FAA8gGeiwUPX12mUuxLiwSCAtTREllzTvxHcLFPqDwRK3YdM8SqAL4CS8RQBJcPnnQLhCFg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"Ben17\",\n  \"lastName\": \"Stoke1\",\n  \"dob\": \"25-06-1993\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save quote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYyMDc3MTcxMSwiaWF0IjoxNjIwNzUzNzExfQ.YKLriJofjr8Z7bDF5u30PAd0XAzvsSEKZwXYCNFVtgIyLKDAN4iBExR25BzOsCa38kiXVSFCrG4ZeVebiwmyxg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customerId\": 1,\n  \"type\": \"personal-accident20\",\n  \"premium\": 201,\n  \"cover\": 200000,\n\n  \"state1\": \"new\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/quote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update quote state",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYyMDc3MTcxMSwiaWF0IjoxNjIwNzUzNzExfQ.YKLriJofjr8Z7bDF5u30PAd0XAzvsSEKZwXYCNFVtgIyLKDAN4iBExR25BzOsCa38kiXVSFCrG4ZeVebiwmyxg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"policyId\": 1,\n  \"state\": \"active\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/quote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"user1\",\n    \"password\":\"password\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"user1\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by customer ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYyMDc3MzM5NSwiaWF0IjoxNjIwNzU1Mzk1fQ.4jjSDfTGJd0-i7mNy2z--azvHp8pUHwDoGJTDXomzwCEK4whXrPYCiHqIKnZFCYxbVcMKW0he5K8-qmQMxzgxg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/policies/1/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"policies",
+						"1",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by DOB",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYyMDc3MzM5NSwiaWF0IjoxNjIwNzU1Mzk1fQ.4jjSDfTGJd0-i7mNy2z--azvHp8pUHwDoGJTDXomzwCEK4whXrPYCiHqIKnZFCYxbVcMKW0he5K8-qmQMxzgxg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/policies/?dob=25-06-1993",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"policies",
+						""
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "25-06-1993"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by last Name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYyMDc3MzM5NSwiaWF0IjoxNjIwNzU1Mzk1fQ.4jjSDfTGJd0-i7mNy2z--azvHp8pUHwDoGJTDXomzwCEK4whXrPYCiHqIKnZFCYxbVcMKW0he5K8-qmQMxzgxg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/policies/?lastName=Stoke1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"policies",
+						""
+					],
+					"query": [
+						{
+							"key": "lastName",
+							"value": "Stoke1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by type",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYyMDc3MzM5NSwiaWF0IjoxNjIwNzU1Mzk1fQ.4jjSDfTGJd0-i7mNy2z--azvHp8pUHwDoGJTDXomzwCEK4whXrPYCiHqIKnZFCYxbVcMKW0he5K8-qmQMxzgxg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/policies/?type=personal-accident13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"policies",
+						""
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "personal-accident13"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
